@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>PMAL 2027</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f5f5f5;
+}
+
+header{
+    background:#003366;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.menu{
+    display:flex;
+    background:#0055aa;
+}
+
+.menu button{
+    flex:1;
+    padding:15px;
+    border:none;
+    background:#0055aa;
+    color:white;
+    cursor:pointer;
+}
+
+.menu button:hover{
+    background:#003366;
+}
+
+.aba{
+    display:none;
+    padding:20px;
+}
+
+.ativa{
+    display:block;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-top:15px;
+    border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Portal PMAL 2027</h1>
+<p>Estudo Estratégico para Soldado</p>
+</header>
+
+<div class="menu">
+
+<button onclick="abrirAba('estudar')">
+Estudar
+</button>
+
+<button onclick="abrirAba('questoes')">
+Questões
+</button>
+
+<button onclick="abrirAba('cronograma')">
+Cronograma
+</button>
+
+<button onclick="abrirAba('taf')">
+TAF
+</button>
+
+</div>
+
+<div id="estudar" class="aba ativa">
+
+<div class="card">
+<h2>Legislação PMAL</h2>
+
+<p>
+Prioridade máxima.
+</p>
+
+<ul>
+<li>Estatuto PMAL</li>
+<li>Regulamento Disciplinar</li>
+<li>Lei Orgânica das PMs</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="questoes" class="aba">
+
+<div class="card">
+
+<h2>Questão 1</h2>
+
+<p>
+A hierarquia é base institucional da Polícia Militar.
+</p>
+
+<p>
+Resposta: CERTO
+</p>
+
+</div>
+
+</div>
+
+<div id="cronograma" class="aba">
+
+<div class="card">
+
+<h2>Cronograma</h2>
+
+<ul>
+<li>Terça: Legislação PMAL</li>
+<li>Quarta: Constitucional</li>
+<li>Quinta: Penal Militar</li>
+<li>Sexta: Português</li>
+<li>Sábado: Processo Penal Militar</li>
+<li>Domingo: Revisão</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="taf" class="aba">
+
+<div class="card">
+
+<h2>TAF PMAL</h2>
+
+<ul>
+<li>Barra: 4 repetições</li>
+<li>Abdominal: 40</li>
+<li>Corrida 2km: 11 min</li>
+<li>Natação 50m: 1min05s</li>
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+function abrirAba(nome){
+
+document.querySelectorAll('.aba').forEach(function(aba){
+aba.classList.remove('ativa');
+});
+
+document.getElementById(nome).classList.add('ativa');
+
+}
+
